@@ -14,7 +14,21 @@ import InfoPopup from "../../info/InfoPopup";
 
 const CreateLocation = ({ changeVisible }) => {
   const { Option } = Select;
-  const users = ["Artem Rasspopov", "Igor Caster", "Vlad Bumaga"];
+  const users = [
+    "Artem Rasspopov",
+    "Igor Caster",
+    "Vlad Bumaga",
+    "Vlad Bumaga",
+    "Vlad Bumaga",
+    "Vlad Bumaga",
+    "Vlad Bumaga",
+    "Vlad Bumaga",
+    "Vlad Bumaga",
+    "Vlad Bumaga",
+    "Vlad Bumaga",
+    "Vlad Bumaga",
+    "Vlad Bumaga",
+  ];
   const dispatch = useDispatch();
   const [warningIsVisible, setWarningIsVisible] = React.useState(false);
 
