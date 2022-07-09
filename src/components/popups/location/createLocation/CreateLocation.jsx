@@ -17,17 +17,18 @@ const CreateLocation = ({ changeVisible }) => {
   const users = [
     "Artem Rasspopov",
     "Igor Caster",
-    "Vlad Bumaga",
-    "Vlad Bumaga",
-    "Vlad Bumaga",
-    "Vlad Bumaga",
-    "Vlad Bumaga",
-    "Vlad Bumaga",
-    "Vlad Bumaga",
-    "Vlad Bumaga",
-    "Vlad Bumaga",
-    "Vlad Bumaga",
-    "Vlad Bumaga",
+    "Asia Bertosh",
+    "User 1",
+    "User 2",
+    "User 3",
+    "User 4",
+    "User 5",
+    "User 6",
+    "User 7",
+    "User 8",
+    "User 9",
+    "User 10",
+    "User 11",
   ];
   const dispatch = useDispatch();
   const [warningIsVisible, setWarningIsVisible] = React.useState(false);
@@ -167,7 +168,7 @@ const CreateLocation = ({ changeVisible }) => {
               <InfoPopup
                 className={style.InfoPopup}
                 text={
-                  "This default time zone is used throughout the system. For example for accurately displaying leave information in the calendar and for the system events listed in the Logs."
+                  "This setting will determine if your leave balance will be reset based on the accounting year (company's fiscal year) or based on the employee's start date. Besides quotas, your roll-over policy will also be affected according to this setting."
                 }
               />
             </Form.Item>
@@ -225,7 +226,7 @@ const CreateLocation = ({ changeVisible }) => {
               <InfoPopup
                 className={style.InfoPopup}
                 text={
-                  "This default time zone is used throughout the system. For example for accurately displaying leave information in the calendar and for the system events listed in the Logs."
+                  "Each year, the user's rolled over leaves will expire on the date you set. The quotas for each leave type are configured through the Leave Types section for this location and each can be set individually to allow or not allow roll overs."
                 }
               />
             </div>
@@ -346,7 +347,7 @@ const CreateLocation = ({ changeVisible }) => {
               <InfoPopup
                 className={style.InfoPopup}
                 text={
-                  "This default time zone is used throughout the system. For example for accurately displaying leave information in the calendar and for the system events listed in the Logs."
+                  "By making this Location the default one, all new team members will be automatically added to this Location."
                 }
               />
             </div>
