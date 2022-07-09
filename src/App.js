@@ -11,7 +11,8 @@ function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<PageNotFound />} />
-        <Route path="/Settings" element={<Settings />}></Route>
+        <Route path="/Settings" element={<Settings />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );
