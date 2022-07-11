@@ -6,7 +6,7 @@ import Breadcrumb from "../../components/breadcrumb/Breadcrumb";
 import LocationCard from "../../components/locationCard/LocationCard";
 import CreateLocation from "../../components/popups/location/createLocation/CreateLocation";
 //svg icons
-import { ReactComponent as SettingsSvg} from '../../assets/images/icons/settings-small-icon.svg'
+import { ReactComponent as SettingsSvg } from "../../assets/images/icons/settings-small-icon.svg";
 //redux
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import { fetchLocationCards } from "../../redux/slices/locationsSlice";
@@ -30,14 +30,20 @@ const VacationManager = () => {
 
   React.useEffect(() => {
     if (status === "update") {
+      // fetchCards();
+    }
+    if (status === "update") {
       fetchCards();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status]);
 
   return (
-    <div className='page'>
-      <Breadcrumb items={["Settings", "Vacation Manager"]} icon={<SettingsSvg />} />
+    <div className="page">
+      <Breadcrumb
+        items={["Settings", "Vacation Manager"]}
+        icon={<SettingsSvg />}
+      />
       <section className={style.location}>
         <div className={style.top}>
           <div className={style.title}>

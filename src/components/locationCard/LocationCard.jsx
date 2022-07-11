@@ -73,9 +73,9 @@ const LocationCard = ({ card }) => {
 
   return (
     <div className={style.LocationCard}>
-      <h2 className={style.title}>
+      <p className={style.title}>
         {card.LocationName} {card.Default && <span>default</span>}
-      </h2>
+      </p>
       <div className={style.inner}>
         <div className={style.item}>
           Holidays <span>View Holidays</span>

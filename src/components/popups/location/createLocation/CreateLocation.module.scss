@@ -21,11 +21,16 @@
   background: $White;
   box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.05), 2px 2px 15px rgba(0, 44, 175, 0.05);
   border-radius: 12px;
+  padding-top: 5px;
   display: block;
   z-index: 2;
-  // position: absolute;
   max-width: 550px;
-  // margin-top: 300px;
+  max-height: calc(100vh - 100px);
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 .popupHeader {

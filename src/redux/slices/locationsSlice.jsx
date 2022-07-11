@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchLocationCards = createAsyncThunk(
-  "pizzas/fetchLocationCards",
+  "locations/fetchLocationCards",
   async () => {
     const res = await axios.get(
       `https://629703cc14e756fe3b26fb80.mockapi.io/Location`
@@ -12,7 +12,7 @@ export const fetchLocationCards = createAsyncThunk(
 );
 
 export const deleteLocationCard = createAsyncThunk(
-  "pizzas/deleteLocationCard",
+  "locations/deleteLocationCard",
   async (cardName) => {
     console.log(cardName);
     const res = await axios.delete(
@@ -23,7 +23,7 @@ export const deleteLocationCard = createAsyncThunk(
 );
 
 export const postLocationCard = createAsyncThunk(
-  "pizzas/postLocationCard",
+  "locations/postLocationCard",
   async (values) => {
     console.log(values);
     const res = await axios.post(
