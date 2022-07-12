@@ -5,12 +5,12 @@ import "../../../../style/antd.scss";
 import style from "./CreateLocation.module.scss";
 //icons
 import { ReactComponent as CloseSvg } from "../../../../assets/images/icons/close-icon.svg";
+import { ReactComponent as InfoSvg } from "../../../../assets/images/icons/info-icon.svg";
 //redux
 import { useDispatch } from "react-redux/es/exports";
 import { postLocationCard } from "../../../../redux/slices/locationsSlice";
 //components
-import { Checkbox, Form, Input, Col, Row, Select } from "antd";
-import InfoPopup from "../../info/InfoPopup";
+import { Checkbox, Form, Input, Col, Row, Select, Tooltip } from "antd";
 
 const CreateLocation = ({ changeVisible }) => {
   const { Option } = Select;
@@ -165,12 +165,11 @@ const CreateLocation = ({ changeVisible }) => {
                   User Employment Date
                 </Option>
               </Select>
-              <InfoPopup
-                className={style.InfoPopup}
-                text={
-                  "This setting will determine if your leave balance will be reset based on the accounting year (company's fiscal year) or based on the employee's start date. Besides quotas, your roll-over policy will also be affected according to this setting."
-                }
-              />
+              <Tooltip title="This setting will determine if your leave balance will be reset based on the accounting year (company's fiscal year) or based on the employee's start date. Besides quotas, your roll-over policy will also be affected according to this setting.">
+                <button>
+                  <InfoSvg />
+                </button>
+              </Tooltip>
             </Form.Item>
 
             {/* FiscalYearStart */}
@@ -223,12 +222,11 @@ const CreateLocation = ({ changeVisible }) => {
               >
                 <Checkbox>No Brought Forward Expiry Date </Checkbox>
               </Form.Item>
-              <InfoPopup
-                className={style.InfoPopup}
-                text={
-                  "Each year, the user's rolled over leaves will expire on the date you set. The quotas for each leave type are configured through the Leave Types section for this location and each can be set individually to allow or not allow roll overs."
-                }
-              />
+              <Tooltip title="Each year, the user's rolled over leaves will expire on the date you set. The quotas for each leave type are configured through the Leave Types section for this location and each can be set individually to allow or not allow roll overs.">
+                <button>
+                  <InfoSvg />
+                </button>
+              </Tooltip>
             </div>
 
             {/* WeekStartsOn */}
@@ -257,6 +255,7 @@ const CreateLocation = ({ changeVisible }) => {
                 marginBottom: 24,
                 display: "flex",
                 alignItems: "center",
+                gap: 10
               }}
             >
               <Form.Item
@@ -281,12 +280,11 @@ const CreateLocation = ({ changeVisible }) => {
                   ))}
                 </Select>
               </Form.Item>
-              <InfoPopup
-                className={style.InfoPopup}
-                text={
-                  "This default time zone is used throughout the system. For example for accurately displaying leave information in the calendar and for the system events listed in the Logs."
-                }
-              />
+              <Tooltip title="This default time zone is used throughout the system. For example for accurately displaying leave information in the calendar and for the system events listed in the Logs.">
+                <button>
+                  <InfoSvg />
+                </button>
+              </Tooltip>
             </div>
 
             {/* Users */}
@@ -344,12 +342,11 @@ const CreateLocation = ({ changeVisible }) => {
               <Form.Item name="Default" valuePropName="checked">
                 <Checkbox>Make This Location Default</Checkbox>
               </Form.Item>
-              <InfoPopup
-                className={style.InfoPopup}
-                text={
-                  "By making this Location the default one, all new team members will be automatically added to this Location."
-                }
-              />
+              <Tooltip title="By making this Location the default one, all new team members will be automatically added to this Location.">
+                <button>
+                  <InfoSvg />
+                </button>
+              </Tooltip>
             </div>
 
             <div className="policy" style={{ marginBottom: 24 }}>
